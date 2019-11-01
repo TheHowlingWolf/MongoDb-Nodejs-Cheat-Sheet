@@ -18,7 +18,10 @@
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/playground',{useNewUrlParser:true,useUnifiedTopology:true}) //it returns a promise so we call then when promise is fullfilled and catch if not
+mongoose.connect('mongodb://localhost/playground',{useNewUrlParser:true,useUnifiedTopology:true}) //it returns a promise so we call then when promise is fullfilled and catch if not.... 
+//first property has the url of the mongodb database and where to for real apps we get the link from MongoDb.com->login->Atlas->Sandbox->connect->Connect-Your-Application->connection-string-only->copy paste it in instead of localhost link 
+//Remember to change <password> with the user set password and enable whitelist ips recommended to use 0.0.0.0 and the second property is object with two attributes useNewUrlParser and useUnifiedTopology 
+//set them to true this is default syntax for Mongodb new release and enables to use new modules and overrules the depcricated ones!
     .then(()=> console.log('Connected to MongoDB'))//if connected then show message
     .catch(()=> console.error('Could not Connect to Mongo Database',err)); //if connection failed then show message log error
 
