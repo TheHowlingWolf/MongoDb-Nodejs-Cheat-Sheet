@@ -13,14 +13,32 @@
 */
 
 
+////////////////////////////////////Installing Mongodb Locally////////////////////////////
+/*
+                    1.Download Mongodb And install from official website
+                    2.Download Mongodb compass and install from official website
+                    3.Go to program files-> Mongodb -> Server -> Version (recent 4.x) -> bin
+                    4.Copy the Directory path
+                    5.Search for advance system settings
+                    6.Go to Environment Variables -> System Variables -> Klick Path from list -> Edit -> New -> Paste the dir url -> save and ok exit 
+                    7.close all command prompt and now open Cmd and type after colone ::::> md c:\data\db  <::::: press enter
+                    8.again type ::::> mongod <::::: and mongodb is running
+                    9.open mongodb compass click next->next continue then on get started and on reg page keep all fields as they are and connect 
+                    10.sometimes mongod stops running in background then use step 8 to again start it you can check on processes in task m
+*/
+
+
+
+
+
 
 //////////////////Creating Schema/////////////////////
 
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/playground',{useNewUrlParser:true,useUnifiedTopology:true}) //it returns a promise so we call then when promise is fullfilled and catch if not.... 
-//first property has the url of the mongodb database and where to for real apps we get the link from MongoDb.com->login->Atlas->Sandbox->connect->Connect-Your-Application->connection-string-only->copy paste it in instead of localhost link 
-//Remember to change <password> with the user set password and enable whitelist ips recommended to use 0.0.0.0 and the second property is object with two attributes useNewUrlParser and useUnifiedTopology 
+//first property has the url of the mongodb database here we are using localhost and for real apps we get the link from MongoDb.com->login->Atlas->Sandbox->connect->Connect-Your-Application->connection-string-only->copy paste it in instead of localhost link 
+//Remember to change <password> in the pasted link with the user set password and enable whitelist ips recommended to use 0.0.0.0 and the second property is object with two attributes useNewUrlParser and useUnifiedTopology 
 //set them to true this is default syntax for Mongodb new release and enables to use new modules and overrules the depcricated ones!
     .then(()=> console.log('Connected to MongoDB'))//if connected then show message
     .catch(()=> console.error('Could not Connect to Mongo Database',err)); //if connection failed then show message log error
