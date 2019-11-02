@@ -230,7 +230,7 @@ async function getCourses() {
 async function getCourses() {
     const findCourses = await Course
     //.find({ author:'Debraj' }) this will return only whose authors are exactly 'Debraj' not 'Debraj Sengupta' or 'Debraj Codepth'
-    //to get the result we use **For resulting objects whose authors starts with mosh
+    //For resulting objects whose authors starts with Debraj, to get the result we use 
     
     // with author filter instead of string we put a regular expression whose pattern is " /pattern/ "
     .find({ author: /^Debraj/ }) //case sensitive
@@ -271,7 +271,7 @@ async function getCourses() {
 /*
             we use skip() with limit() to use pagination
 
-            we need to const pageNumber which defines the number of pages
+            we need two constants pageNumber which defines the number of pages
             and pageSize i.e. what each page size should be
     */
 
