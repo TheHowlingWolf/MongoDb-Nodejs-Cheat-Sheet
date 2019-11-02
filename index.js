@@ -297,11 +297,15 @@ async function getCourses() {
 
 ///////////////////////MongoDb Update/////////////////////////
 
-async function updateCourse(id){
-    /*:::::Approaches Used::::
+/*      
+                        :::::Approaches Used::::
+        
         /////////////// 1st Approach Query First ////////////////
         ////////////// 2nd Approach Update First///////////////////////
+        
         */
+
+async function updateCourse(id){
 
         /*      /////////////// Approach Query First ////////////////
                 1.first retrieve the docs with findById()
@@ -332,18 +336,7 @@ async function updateCourse(id){
 
 
 /*      ////////////// 2nd Approach Update First///////////////////////
-            1.use update() instead findById()
-            2.Modify its properties
-            3.Call save()
-        */
-async function updateCourse(id){
-/*:::::Steps::::
-/////////////// 1st Approach Query First ////////////////
-////////////// 2nd Approach Update First///////////////////////
-*/
-
-/*      /////////////// 1st Approach Query First ////////////////
-        1.first retrieve the docs with findById()
+        1.here we dont retrieve the docs with findById() instead use update()
         2.Modify its properties using mongodb update operators
             
                     ///////// Update Operators/////////////
