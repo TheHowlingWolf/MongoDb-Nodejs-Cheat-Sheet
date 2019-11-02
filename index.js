@@ -20,7 +20,7 @@
                     3.Go to program files-> Mongodb -> Server -> Version (recent 4.x) -> bin
                     4.Copy the Directory path
                     5.Search for advance system settings
-                    6.Go to Environment Variables -> System Variables -> Klick Path from list -> Edit -> New -> Paste the dir url -> save and ok exit 
+                    6.Go to Environment Variables -> System Variables -> Click Path from list -> Edit -> New -> Paste the dir url -> save and ok exit 
                     7.close all command prompt and now open Cmd and type after colone ::::> md c:\data\db  <::::: press enter
                     8.again type ::::> mongod <::::: and mongodb is running
                     9.open mongodb compass click next->next continue then on get started and on reg page keep all fields as they are and connect 
