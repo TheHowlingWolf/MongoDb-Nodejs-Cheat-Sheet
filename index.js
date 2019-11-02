@@ -352,7 +352,7 @@ async function updateCourse(id){
                     10.many more at mongodb document website
         3.We dont have to Call save() explicitly it will do it automatically 
     */
-
+async function updateCourse(id){
     const result = await Course.update({ //remember we are getting the result directly of the change so we are using const result instead const course
         //isBoolean: false to reflect changes to all files having isBoolean = false
         _id: id}, //to reflect changes to a particular id
